@@ -1,0 +1,51 @@
+{
+  "name": "aegisflow",
+  "version": "1.0.0",
+  "description": "Enterprise-Grade, Resilient, Zero-Debt AI Agent Execution Engine & Distributed Telemetry Gateway",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "aegisflow": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "node -e \"fs.rmSync('dist', {recursive:true,force:true}); fs.rmSync('coverage', {recursive:true,force:true})\"",
+    "start": "node dist/cli.js",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest run",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "test:chaos": "vitest run tests/chaos",
+    "test:coverage": "vitest run --coverage",
+    "bench": "vitest bench --run",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "ai-agent",
+    "agent-runtime",
+    "resilience",
+    "circuit-breaker",
+    "telemetry",
+    "opentelemetry",
+    "fault-tolerant",
+    "rate-limiter",
+    "token-budget",
+    "zero-debt"
+  ],
+  "author": "Gökçen Çiftci <gokcenciftci938@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "@vitest/coverage-v8": "^2.0.5",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

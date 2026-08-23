@@ -1,0 +1,7 @@
+# GitHub Linguist Language Overrides
+*.js linguist-vendored
+*.mjs linguist-vendored
+*.cjs linguist-vendored
+*.html linguist-documentation
+*.css linguist-documentation
+*.json linguist-documentation
